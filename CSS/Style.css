@@ -1,0 +1,88 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url(../images/P1040812.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+#register-title {
+    font-size: 64px;
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+
+#btn {
+    background-color: #6ffdb6;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 5%;
+    
+}
+
+#btn2 {
+    background-color: #FF8686;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 5%;
+    
+}
+
+#btn:hover {
+    background-color: #00ff4c;
+    color: #000000;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    background-color: #00ff4c;
+    color: #000000;
+    cursor: pointer;
+}
+
+#btn-container {
+    display: flex;
+margin-bottom: 150px;
+    
+}
+.input-style{
+    border-radius: 10px;
+    margin: 10px 50px;
+    font-size: 20px;
+    font-weight: 100;
+}
+@media only screen and (max-width: 600px)
+{
+    #register-title {
+        font-size: 25px;
+    }
+    #btn {
+        font-size: 15px;
+    }
+    
+    #btn2 {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1450px)
+{
+    #register-title {
+        font-size: 40px;
+    }
+    #btn {
+        font-size: 15px;
+    }
+    
+    #btn2 {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,166 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url(../images/P1040812-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+#register-form-wrapper {
+    padding: 10% 10%;
+}
+
+#register-form {
+    margin-left: 18%;
+    margin-right: 18%;
+    padding: 2% 5%;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.514);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-style {
+    font-size: 22px;
+    color: #000000;
+}
+
+.input-style {
+    background: rgba(255, 255, 255, -0.45);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.input-style:focus {
+    outline: 1px solid #000000;
+}
+
+#register-title {
+    font-size: 64px;
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+#btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-left: 5px;
+}
+
+#btn2 {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-right: 5px;
+}
+
+#btn:hover {
+    background-color: #00ff4c;
+    color: #000000;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    background-color: #00ff4c;
+    color: #000000;
+    cursor: pointer;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#label {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#erreur1 {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 13px;
+    font-style: italic;
+    color: red;
+    display: none;
+    align-self: center;
+}
+
+#erreur2 {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 13px;
+    font-style: italic;
+    color: red;
+    display: none;
+    align-self: center;
+}
+@media only screen and (max-width: 600px)
+{
+    #register-title {
+        font-size: 25px;
+    }
+    #btn {
+        font-size: 15px;
+    }
+    
+    #btn2 {
+        font-size: 15px;
+    }
+    .label-style {
+        font-size: 15px;
+    }
+    
+    .input-style {
+        
+        font-size: 15px;
+    }
+    #register-form-wrapper {
+        padding: 10% 0;
+    }
+    #register-form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1450px)
+{
+    #register-title {
+        font-size: 40px;
+    }
+    #register-form-wrapper {
+        padding: 10% 0;
+    }
+    #register-form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
