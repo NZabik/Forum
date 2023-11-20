@@ -2,7 +2,8 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -12,6 +13,7 @@ body {
     background-position: center;
     min-height: 100%;
 }
+
 #register-title {
     font-size: 64px;
     text-align: center;
@@ -26,7 +28,7 @@ body {
     color: rgb(0, 0, 0);
     border: none;
     padding: 8px 5%;
-    
+    text-decoration: none;
 }
 
 #btn2 {
@@ -34,7 +36,7 @@ body {
     color: rgb(0, 0, 0);
     border: none;
     padding: 8px 5%;
-    
+    text-decoration: none;
 }
 
 #btn:hover {
@@ -51,37 +53,41 @@ body {
 
 #btn-container {
     display: flex;
-margin-bottom: 150px;
-    
+    margin-bottom: 150px;
+
 }
-.input-style{
+
+.input-style {
     border-radius: 10px;
     margin: 10px 50px;
     font-size: 20px;
     font-weight: 100;
+    text-align: center;
 }
-@media only screen and (max-width: 600px)
-{
+
+@media only screen and (max-width: 600px) {
     #register-title {
         font-size: 25px;
     }
+
     #btn {
         font-size: 15px;
     }
-    
+
     #btn2 {
         font-size: 15px;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 1450px)
-{
+
+@media only screen and (min-width: 601px) and (max-width: 1450px) {
     #register-title {
         font-size: 40px;
     }
+
     #btn {
         font-size: 15px;
     }
-    
+
     #btn2 {
         font-size: 15px;
     }
