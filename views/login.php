@@ -1,10 +1,15 @@
 <?php
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "../includes/head.php";
 require_once "../controllers/logincontroller.php";
 ?>
 <link rel="stylesheet" href="../CSS/login.css">
-<div>
-<?php echo ($_SESSION['date']->format('d-m-Y H:i:s'));?>
+<div id="accueil">
+    <?php
+    if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+        echo '<div>Vous vous êtes connecté le ' . $_SESSION['date']->format('d/m/Y à H:i:s'). '</div>';
+    }
+    ?>
 </div>
 <h1 id="register-title">Connexion</h1>
 <div id="register-form-wrapper">
@@ -15,7 +20,7 @@ require_once "../controllers/logincontroller.php";
                 <div id="label">
                     <label class="label-style" for="mail">Adresse E-mail:</label>
                     <?php
-                    if ($_SESSION['erreur7'] == 1) {
+                    if (isset ($_SESSION['erreur7']) && $_SESSION['erreur7'] == 1) {
                         echo '<p id="erreur">Adresse E-mail incorrecte</p>';
                     }
                     ?>
@@ -24,14 +29,14 @@ require_once "../controllers/logincontroller.php";
                 <div id="label">
                     <label class="label-style" for="password">Mot de passe:</label>
                     <?php
-                    if ($_SESSION['erreur8'] == 1) {
+                    if (isset ($_SESSION['erreur8']) && $_SESSION['erreur8'] == 1) {
                         echo '<p id="erreur">Mot de passe incorrect</p>';
                     }
                     ?>
                 </div>
                 <input class="input-style" type="password" name="password" id="password" placeholder="Votre mot de passe" />
                 <?php
-                if ($_SESSION['success2'] == 1) {
+                if (isset ($_SESSION['success2']) && $_SESSION['success2'] == 1) {
                     echo '<p id="success">Vous vous êtes connecté !</p>';
                 }
                 ?>

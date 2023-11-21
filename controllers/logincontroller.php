@@ -1,4 +1,5 @@
-<?php  session_start();
+<?php 
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "connexiondb.php";
 $con = connectdb();
 
@@ -8,10 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$mailExist->execute([$mail]);
 	$user = $mailExist->fetch();
     $mdp = $_POST['password'];
-    $pass = 'SELECT MDP FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
+    $pass = 'SELECT * FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
     $response = $con->query($pass);
     $row = $response->fetch();
-    $dt = getdate();
+    date_default_timezone_set('Europe/Paris');
+    // $nom = 'SELECT Nom FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
+    // $resNom = $con->query($nom);
+    // $rowNom = $resNom->fetch();
+    // $prenom = 'SELECT Prénom FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
+    // $resPrenom = $con->query($prenom);
+    // $rowPrenom = $resPrenom->fetch();
     if (!$user){
         $_SESSION['erreur7'] = 1;
 		$_SESSION['erreur8'] = 0;
@@ -26,8 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$_SESSION['erreur7'] = 0;
 		$_SESSION['erreur8'] = 0;
 		$_SESSION['success2'] = 1;
-        $_SESSION['user'] = $mail;
-        $_SESSION['date'] = $dt;
+        $_SESSION['user'] = 1;
+        $_SESSION['idUser'] = $row['Id_UTILISATEUR'];
+        $_SESSION['nom'] = $row['Nom'];
+        $_SESSION['prenom'] = $row['Prénom'];
+        $_SESSION['profil'] = $row['profil'];
+        $_SESSION['date'] = new DateTime();
 		header("Refresh:0; url= ../views/login.php");
 		exit;
     }

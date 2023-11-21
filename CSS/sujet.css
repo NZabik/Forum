@@ -2,6 +2,31 @@
     --error-color: #dc3545;
     --success-color: #000000;
 }
+#login{
+    display: flex;
+    text-align: end;
+}
+#nomProfil{
+align-self: center;
+color: #00ff4c;
+}
+#divProfil{
+    height: 56px;
+    width: 56px;
+}
+#profil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+#accueil {
+    display: flex;
+    justify-content: end;
+    margin-left: 15px;
+    margin-right: 15px;
+}
 .form-field.error input {
     border-width: 10px;
     border: 2px solid var(--error-color);
@@ -31,13 +56,6 @@ body {
     text-align: center;
     color: #000000;
     font-weight: 700;
-}
-
-#accueil {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
 }
 
 #ajout {

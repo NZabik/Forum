@@ -13,7 +13,25 @@ body {
     background-position: center;
     min-height: 100%;
 }
-
+#login{
+    display: flex;
+    text-align: end;
+}
+#nomProfil{
+align-self: center;
+color: #00ff4c;
+}
+#divProfil{
+    height: 56px;
+    width: 56px;
+}
+#profil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
 #register-title {
     font-size: 64px;
     text-align: center;

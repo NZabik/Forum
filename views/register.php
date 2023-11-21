@@ -1,8 +1,16 @@
 <?php
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "../includes/head.php";
 require_once "../controllers/registercontroller.php";
 ?>
 <link rel="stylesheet" href="../CSS/register.css">
+<div id="accueil">
+    <?php
+    if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+        echo '<div>Vous vous êtes connecté le ' . $_SESSION['date']->format('d/m/Y à H:i:s'). '</div>';
+    }
+    ?>
+</div>
 <h1 id="register-title">S'enregistrer</h1>
 <div id="register-form-wrapper">
     <div id="register-form">
@@ -12,7 +20,7 @@ require_once "../controllers/registercontroller.php";
                 <div id="label">
                     <label class="label-style" for="nom">Nom:</label>
                     <?php
-                    if ($_SESSION['erreur1'] == 1) {
+                    if (isset ($_SESSION['erreur1']) && $_SESSION['erreur1'] == 1) {
                         echo '<p id="erreur">Nom incorrect ou trop court (3 caractères minimum et sans chiffres) !</p>';
                     }
                     ?>
@@ -21,7 +29,7 @@ require_once "../controllers/registercontroller.php";
                 <div id="label">
                     <label class="label-style" for="prenom">Prénom:</label>
                     <?php
-                    if ($_SESSION['erreur2'] == 1) {
+                    if (isset ($_SESSION['erreur2']) && $_SESSION['erreur2'] == 1) {
                         echo '<p id="erreur">Prénom incorrect ou trop court (3 caractères minimum et sans chiffres) !</p>';
                     }
                     ?>
@@ -30,10 +38,10 @@ require_once "../controllers/registercontroller.php";
                 <div id="label">
                     <label class="label-style" for="mail">Adresse E-mail:</label>
                     <?php
-                    if ($_SESSION['erreur3'] == 1) {
+                    if (isset ($_SESSION['erreur3']) && $_SESSION['erreur3'] == 1) {
                         echo '<p id="erreur">E-mail requis ou au bon format !</p>';
                     }
-                    if ($_SESSION['erreur4'] == 1) {
+                    if (isset ($_SESSION['erreur4']) && $_SESSION['erreur4'] == 1) {
                         echo '<p id="erreur">Cet E-mail existe déjà !</p>';
                     }
                     ?>
@@ -42,7 +50,7 @@ require_once "../controllers/registercontroller.php";
                 <div id="label">
                     <label class="label-style" for="password">Mot de passe:</label>
                     <?php
-                    if ($_SESSION['erreur5'] == 1) {
+                    if (isset ($_SESSION['erreur5']) && $_SESSION['erreur5'] == 1) {
                         echo '<p id="erreur">Mot de passe requis ! Il doit contenir au moins 8 caractères incluant 1 minuscule, 1 majuscule, 1 nombre et 1 caractère spécial (#+-^[])</p>';
                     }
                     ?>
@@ -51,7 +59,7 @@ require_once "../controllers/registercontroller.php";
                 <div id="label">
                     <label class="label-style" for="password2">Confirmation mot de passe:</label>
                     <?php
-                    if ($_SESSION['erreur6'] == 1) {
+                    if (isset ($_SESSION['erreur6']) && $_SESSION['erreur6'] == 1) {
                         echo '<p id="erreur">Le mot de passe ne correspond pas !</p>';
                     }
                     ?>
@@ -61,10 +69,10 @@ require_once "../controllers/registercontroller.php";
             <div id="label">
                 <label class="label-style" for="profil">Image de profil:</label>
             </div>
-            <input class="input-style" type="file" name="profil" id="profil" />
+            <input class="input-style" type="file" name="profil"/>
 
             <?php
-            if ($_SESSION['success'] == 1) {
+            if (isset ($_SESSION['success']) && $_SESSION['success'] == 1) {
                 echo '<p id="success">Vous vous êtes enregistré !</p>';
             }
             ?>

@@ -12,6 +12,31 @@ body {
     background-position: center;
     min-height: 100%;
 }
+#login{
+    display: flex;
+    text-align: end;
+}
+#nomProfil{
+align-self: center;
+color: #00ff4c;
+}
+#divProfil{
+    height: 56px;
+    width: 56px;
+}
+#profil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+#accueil {
+    display: flex;
+    justify-content: end;
+    margin-left: 15px;
+    margin-right: 15px;
+}
 #register-form-wrapper {
     padding: 10% 10%;
 }
@@ -143,6 +168,10 @@ body {
         
         font-size: 15px;
     }
+    #accueil {
+        font-size: 10px;
+
+    }
     #register-form-wrapper {
         padding: 10% 0;
     }
@@ -162,5 +191,8 @@ body {
     #register-form {
         margin-left: 10%;
         margin-right: 10%;
+    }
+    #accueil {
+        font-size: 13px;
     }
 }
