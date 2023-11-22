@@ -15,7 +15,7 @@ require_once "../controllers/connexiondb.php";
 $con = connectdb();
 date_default_timezone_set('Europe/Paris');
 $req = "SELECT sujet.Id_SUJET,sujet.Nom_sujet FROM sujet where sujet.Id_SUJET='" . $_GET['id'] . "'";
-$req2 = "SELECT discussion.Id_DISCUSSION,discussion.commentaire,discussion.datecommentaire,sujet.Id_SUJET,utilisateur.Nom,utilisateur.Prénom,sujet.Nom_sujet FROM sujet join discussion on discussion.Id_SUJET = sujet.Id_SUJET join utilisateur on utilisateur.Id_UTILISATEUR = discussion.id_UTILISATEUR WHERE sujet.Id_SUJET='" . $_GET['id'] . "' ORDER BY discussion.Id_DISCUSSION";
+$req2 = "SELECT discussion.Id_DISCUSSION,discussion.commentaire,discussion.datecommentaire,sujet.Id_SUJET,utilisateur.Id_UTILISATEUR,utilisateur.Nom,utilisateur.Prénom,sujet.Nom_sujet FROM sujet join discussion on discussion.Id_SUJET = sujet.Id_SUJET join utilisateur on utilisateur.Id_UTILISATEUR = discussion.id_UTILISATEUR WHERE sujet.Id_SUJET='" . $_GET['id'] . "' ORDER BY discussion.Id_DISCUSSION";
 $response = $con->query( $req );
 $response2 = $con->query( $req2 );
 $row2= $response->fetch();
@@ -41,6 +41,7 @@ echo '<h1 id="register-title">' . $row2['Nom_sujet'] . '</h1>';
             <th class="sujet">Commentaire</th>
             <th class="modif">Date commentaire</th>
             <th class="auteur">Auteur</th>
+            <th class="supp">Suppression</th>
         </tr>
     </thead>
     <tbody id="tableBody">
@@ -50,10 +51,13 @@ echo '<h1 id="register-title">' . $row2['Nom_sujet'] . '</h1>';
             echo '<tr>
             <td>' . $row['commentaire'] . '</td>
             <td>' . $row['datecommentaire'] . '</td>
-            <td>' . $row['Nom'] . ' ' . $row['Prénom'] . '</td>
-                </tr>';
-        }
-        ?>
+            <td>' . $row['Nom'] . ' ' . $row['Prénom'] . '</td>';
+            if ($row['Id_UTILISATEUR'] != $_SESSION['idUser']){
+                echo '<td align="center" width ="100"><a href="../controllers/deletecomm.php?id=' . $row['Id_DISCUSSION'] . '" class=" nav-link disabled"><button class="btn btn-secondary mx-1">Supprimer</button></a></td>';
+            } else { echo '<td align="center" width ="100"><a href="../controllers/deletecomm.php?id=' . $row['Id_DISCUSSION'] . '"><button class="btn btn-danger mx-1">Supprimer</button></a></td>';}
+            echo '</tr>';
+            }
+            ?>
     </tbody>
 </table>
 <form action="" method="post" id="formulaire">

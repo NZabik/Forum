@@ -3,7 +3,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "connexiondb.php";
 $con = connectdb();
 date_default_timezone_set('Europe/Paris');
-$req = "SELECT sujet.Id_SUJET,sujet.Nom_sujet,sujet.date,utilisateur.Nom,utilisateur.Prénom from sujet join utilisateur on utilisateur.Id_UTILISATEUR = sujet.Id_UTILISATEUR WHERE Id_CATEGORIE = 2 order by Id_SUJET";
+$req = "SELECT sujet.Id_SUJET,sujet.Nom_sujet,sujet.date,sujet.Id_UTILISATEUR,utilisateur.Nom,utilisateur.Prénom from sujet join utilisateur on utilisateur.Id_UTILISATEUR = sujet.Id_UTILISATEUR WHERE Id_CATEGORIE = 2 order by Id_SUJET";
 // avoir la réponse de la requête dans une autre requête qui se connecte à la BDD
 $res = $con->query($req);
 // on récupère toutes les lignes de la requête

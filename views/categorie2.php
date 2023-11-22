@@ -24,22 +24,26 @@ require_once "../controllers/categ2controller.php";
 <table class="table table-striped" id="myTable">
     <thead>
         <tr>
-            <th class="sujet">Sujet</th>
+        <th class="sujet">Sujet</th>
             <th class="modif">date de création</th>
             <th class="auteur">Auteur</th>
             <th class="lien">lien</th>
+            <th class="supp">Suppression</th>
         </tr>
     </thead>
     <tbody id="tableBody">
-        <?php
+    <?php
         // boucle foreach pour afficher chaque ligne de la requête
         foreach ($lignes as $ligne) {
             echo '<tr>
             <td>' . $ligne['Nom_sujet'] . '</td>
             <td>' . $ligne['date'] . '</td>
             <td>' . $ligne['Nom'] . ' ' . $ligne['Prénom'] . '</td>
-            <td align="center" width ="100"><a href="sujet.php?id=' . $ligne['Id_SUJET'] . '"><button class="btn btn-primary mx-1">Aller</button></a></td>
-                </tr>';
+            <td align="center" width ="100"><a href="sujet.php?id=' . $ligne['Id_SUJET'] . '"><button class="btn btn-primary mx-1">Aller</button></a></td>';
+            if ($ligne['Id_UTILISATEUR'] != $_SESSION['idUser']){
+            echo '<td align="center" width ="100"><a href="../controllers/deletecat2.php?id=' . $ligne['Id_SUJET'] . '" class=" nav-link disabled"><button class="btn btn-secondary mx-1">Supprimer</button></a></td>';
+        } else { echo '<td align="center" width ="100"><a href="../controllers/deletecat2.php?id=' . $ligne['Id_SUJET'] . '"><button class="btn btn-danger mx-1">Supprimer</button></a></td>';}
+        echo '</tr>';
         }
         ?>
     </tbody>
