@@ -77,7 +77,11 @@ $_SESSION['success2'] = 0;
     <div class="accueil position-absolute bottom-0 start-50 translate-middle-x">
         <div id="btn-container">
             <a href="/views/register.php" id="btn2" class="input-style">S'enregistrer</a>
-            <a href="/views/login.php" id="btn" class="input-style">Se connecter</a>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+                                echo '<a href="/views/login.php" id="btn3" class="input-style nav-link disabled">Se connecter</a>';
+                        } else { echo '<a href="/views/login.php" id="btn" class="input-style">Se connecter</a>';
+                        }    ?>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

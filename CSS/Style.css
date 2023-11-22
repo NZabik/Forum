@@ -47,14 +47,25 @@ color: #00ff4c;
     border: none;
     padding: 8px 5%;
     text-decoration: none;
+    width: 230px;
 }
 
 #btn2 {
+    background-color: #6ffdb6;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 5%;
+    text-decoration: none;
+    width: auto;
+}
+
+#btn3 {
     background-color: #FF8686;
     color: rgb(0, 0, 0);
     border: none;
     padding: 8px 5%;
     text-decoration: none;
+    width: 230px;
 }
 
 #btn:hover {
