@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['prenom'] = $row['Prénom'];
         $_SESSION['profil'] = $row['profil'];
         $_SESSION['date'] = new DateTime();
-		header("Refresh:0; url= ../views/login.php");
+		header("Refresh:0; url= ../views/forum.php");
 		exit;
     }
 }
