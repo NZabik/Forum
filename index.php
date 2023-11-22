@@ -37,17 +37,25 @@ $_SESSION['success2'] = 0;
                             <a class="nav-link active text-white mx-2" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white mx-2" id="deco2" href="./views/forum.php">Forum</a>
+                        <?php if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+                                echo '<a class="nav-link active text-white mx-2" id="deco2" href="/views/forum.php">Forum</a>';
+                        } else { echo '<a class="nav-link disabled text-secondary mx-2" id="deco2" href="/views/forum.php">Forum</a>';
+                        }    ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text-white mx-2" href="./views/register.php">S'enregistrer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white mx-2" id="deco3" href="./views/login.php">Se
-                                connecter</a>
+                        <?php if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+                                echo '<a class="nav-link disabled text-secondary mx-2" id="deco3" href="/views/login.php">Se connecter</a>';
+                        } else { echo '<a class="nav-link active text-white mx-2" id="deco3" href="/views/login.php">Se connecter</a>';
+                        }    ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white mx-2" id="deco" href="../controllers/deco.php">Se déconnecter</a>
+                        <?php if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+                                echo '<a class="nav-link active text-white mx-2" id="deco" href="/controllers/deco.php">Se déconnecter</a>';
+                        } else { echo '<a class="nav-link disabled text-secondary mx-2" id="deco" href="/controllers/deco.php">Se déconnecter</a>';
+                        }    ?>
                         </li>
                     </ul>
                     <div id="profilNav" class="position-absolute top-0 end-0">
