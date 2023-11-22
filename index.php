@@ -72,6 +72,13 @@ $_SESSION['success2'] = 0;
             </div>
         </nav>
     </header>
+    <div id="accueil">
+    <?php
+    if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
+        echo '<div>Vous vous êtes connecté le ' . $_SESSION['date']->format('d/m/Y à H:i:s'). '</div>';
+    }
+    ?>
+</div>
     <h1 id="register-title">FORUM DES FANS DE LA MARQUE UNIQUE</h1>
 
     <div class="accueil position-absolute bottom-0 start-50 translate-middle-x">
