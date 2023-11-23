@@ -6,15 +6,16 @@ $con = connectdb();
 ?>
 <link rel="stylesheet" href="../CSS/categorie1.css">
 <?php
+
+$req2 = "SELECT * FROM discussion WHERE discussion.Id_discussion='" . $_GET['id'] . "'";
+$response = $con->query($req2);
+$row = $response->fetch();
 if (count($_POST) > 0) {
     global $con;
     $req = "DELETE FROM discussion WHERE discussion.Id_discussion='" . $_GET['id'] . "'";
     $response = $con->query($req);
-    header("location: ../views/forum.php");
+    header("location: ../views/sujet.php?id=". $row['Id_SUJET']);
 }
-$req2 = "SELECT * FROM discussion WHERE discussion.Id_discussion='" . $_GET['id'] . "'";
-$response = $con->query($req2);
-$row = $response->fetch();
 ?>
 <html>
 
