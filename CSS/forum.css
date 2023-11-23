@@ -2,26 +2,32 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
- #login{
+}
+
+#login {
     display: flex;
     text-align: end;
 }
-#nomProfil{
-align-self: center;
-color: #00ff4c;
+
+#nomProfil {
+    align-self: center;
+    color: #00ff4c;
+    text-decoration: none;
 }
-#divProfil{
+
+#divProfil {
     height: 56px;
     width: 56px;
 }
-#profil{
+
+#profil {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    
+
 }
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -31,6 +37,7 @@ body {
     background-position: center;
     min-height: 100%;
 }
+
 #register-title {
     font-size: 64px;
     text-align: center;
@@ -151,17 +158,21 @@ h5 {
     #register-title {
         font-size: 25px;
     }
+
     #accueil {
         font-size: 10px;
 
     }
-    .card-title{
+
+    .card-title {
         font-size: 25px;
     }
-    .card-text{
+
+    .card-text {
         font-size: 14px;
     }
-    #carabtn{
+
+    #carabtn {
         font-size: 14px;
     }
 }
@@ -204,13 +215,16 @@ h5 {
     #accueil {
         font-size: 13px;
     }
-    .card-title{
+
+    .card-title {
         font-size: 25px;
     }
-    .card-text{
+
+    .card-text {
         font-size: 14px;
     }
-    #carabtn{
+
+    #carabtn {
         font-size: 14px;
     }
 }

@@ -52,8 +52,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) session_start();
                         <div></div>
                         <div id="login">
                             <?php if (isset($_SESSION['user']) && $_SESSION['user'] == 1) {
-                                echo '<div id="nomProfil" class="mx-2">' . $_SESSION['nom'] . ' ' . $_SESSION['prenom'] . '</div>';
-                                echo '<div id="divProfil" class="mx-2"><img id="profil" class="" src="' . $_SESSION['profil'] . '"alt="profil"></div>';
+                                echo '<a id="nomProfil" class="mx-2" href="../views/Profil.php">' . $_SESSION['nom'] . ' ' . $_SESSION['prenom'] . '</a>';
+                                echo '<a id="divProfil" class="mx-2" href="../views/Profil.php"><img id="profil" class="" src="' . $_SESSION['profil'] . '"alt="profil"></a>';
                             }
                             ?>
                         </div>

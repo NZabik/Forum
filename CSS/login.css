@@ -2,7 +2,8 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -12,31 +13,38 @@ body {
     background-position: center;
     min-height: 100%;
 }
-#login{
+
+#login {
     display: flex;
     text-align: end;
 }
-#nomProfil{
-align-self: center;
-color: #00ff4c;
+
+#nomProfil {
+    align-self: center;
+    color: #00ff4c;
+    text-decoration: none;
 }
-#divProfil{
+
+#divProfil {
     height: 56px;
     width: 56px;
 }
-#profil{
+
+#profil {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    
+
 }
+
 #accueil {
     display: flex;
     justify-content: end;
     margin-left: 15px;
     margin-right: 15px;
 }
+
 #register-form-wrapper {
     padding: 10% 10%;
 }
@@ -138,7 +146,7 @@ color: #00ff4c;
     align-self: center;
 }
 
-#success{
+#success {
     margin-bottom: 0px;
     margin-left: 10px;
     padding: 0;
@@ -148,50 +156,58 @@ color: #00ff4c;
     display: flex;
     align-self: center;
 }
-@media only screen and (max-width: 600px)
-{
+
+@media only screen and (max-width: 600px) {
     #register-title {
         font-size: 25px;
     }
+
     #btn {
         font-size: 15px;
     }
-    
+
     #btn2 {
         font-size: 15px;
     }
+
     .label-style {
         font-size: 15px;
     }
-    
+
     .input-style {
-        
+
         font-size: 15px;
     }
+
     #accueil {
         font-size: 10px;
 
     }
+
     #register-form-wrapper {
         padding: 10% 0;
     }
+
     #register-form {
         margin-left: 10%;
         margin-right: 10%;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 1450px)
-{
+
+@media only screen and (min-width: 601px) and (max-width: 1450px) {
     #register-title {
         font-size: 40px;
     }
+
     #register-form-wrapper {
         padding: 10% 0;
     }
+
     #register-form {
         margin-left: 10%;
         margin-right: 10%;
     }
+
     #accueil {
         font-size: 13px;
     }

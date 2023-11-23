@@ -26,6 +26,7 @@ body {
 #nomProfil{
 align-self: center;
 color: #00ff4c;
+text-decoration: none;
 }
 #divProfil{
     height: 56px;

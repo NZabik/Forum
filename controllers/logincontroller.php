@@ -39,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['prenom'] = $row['Prénom'];
         $_SESSION['profil'] = $row['profil'];
         $_SESSION['date'] = new DateTime();
+        $_SESSION['dateins'] = $row['Date_inscription'];
+        $_SESSION['email'] = $row['email'];
 		header("Refresh:0; url= ../views/forum.php");
 		exit;
     }

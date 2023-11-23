@@ -2,31 +2,38 @@
     --error-color: #dc3545;
     --success-color: #000000;
 }
-#login{
+
+#login {
     display: flex;
     text-align: end;
 }
-#nomProfil{
-align-self: center;
-color: #00ff4c;
+
+#nomProfil {
+    align-self: center;
+    color: #00ff4c;
+    text-decoration: none;
 }
-#divProfil{
+
+#divProfil {
     height: 56px;
     width: 56px;
 }
-#profil{
+
+#profil {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    
+
 }
+
 #accueil {
     display: flex;
     justify-content: end;
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .form-field.error input {
     border-width: 10px;
     border: 2px solid var(--error-color);
@@ -40,7 +47,8 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -65,11 +73,13 @@ body {
     margin: auto;
     width: 98%;
 }
-#indic{
+
+#indic {
     margin-top: 20px;
     margin-left: 15px;
     color: blue;
 }
+
 #sujet {
     width: 96%;
     height: 50px;
@@ -87,24 +97,30 @@ body {
     color: white;
     width: auto;
 }
-th{
+
+th {
     font-weight: bold;
     text-align: center;
     border: 1px solid rgb(0, 0, 0);
 }
-.auteur{
+
+.auteur {
     width: 15%;
 }
-.modif{
+
+.modif {
     width: 15%;
 }
-.sujet{
+
+.sujet {
     width: auto;
 }
-.nb{
+
+.nb {
     width: 5%;
 }
-td{
+
+td {
     border: 1px solid rgb(0, 0, 0);
     vertical-align: middle;
 }
@@ -118,6 +134,7 @@ td{
         font-size: 10px;
 
     }
+
     #myTable {
         font-size: 10px;
 
