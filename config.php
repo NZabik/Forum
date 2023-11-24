@@ -5,8 +5,8 @@ $con = connectdb();
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 // init configuration
-$google_app_id='647645689978-qfcl1nni2i2i59lrkllaol28ipoa94pk.apps.googleusercontent.com';
-$google_app_secret='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';
+$google_app_id='votre application ID';
+$google_app_secret='votre application SECRET';
 $google_callbackurl='http://localhost:3000/callback.php';
 // create Client Request to access Google API
 $http = new GuzzleHttp\Client(['verify' => 'C:/wamp64/bin/php/php8.2.0/extras/ssl/cacert.pem']);
