@@ -43,11 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail2->Password = 'cLH:dQek7vrKMEd';     //Sets SMTP password
         $mail2->SMTPSecure = 'ssl';       //Sets connection prefix. Options are "", "ssl" or "tls"
         $mail2->From = 'testmailphp@laposte.net';   //Sets the From email address for the message
-        $mail2->FromName = 'Nicolas Zabik';     //Sets the From name of the message
+        $mail2->FromName = 'FORUM UNIQUE';     //Sets the From name of the message
         $mail2->AddAddress($mail);  //Adds a "To" address   
         $mail2->WordWrap = 50;       //Sets word wrapping on the body of the message to a given number of characters
         $mail2->IsHTML(true);       //Sets message type to HTML    
-        $mail2->Subject = 'Réinitialisation mot de passe';   //Sets the Subject of the message
+        $mail2->Subject = 'Reinitialisation mot de passe';   //Sets the Subject of the message
         $mail2->Body = $mail_body;       //An HTML or plain text message body
         if ($mail2->Send())        //Send an Email. Return true on success or false on error
         {

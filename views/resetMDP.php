@@ -14,7 +14,6 @@ require_once "../controllers/connexiondb.php";
     $response = $con->query($req);
     $row = $response->fetch();
     $token = $_GET['token'];
-    var_dump($token);
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_GET['token'];
         $tokenExist = $con->prepare("SELECT * FROM utilisateur where token=?");
