@@ -13,12 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response = $con->query($pass);
     $row = $response->fetch();
     date_default_timezone_set('Europe/Paris');
-    // $nom = 'SELECT Nom FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
-    // $resNom = $con->query($nom);
-    // $rowNom = $resNom->fetch();
-    // $prenom = 'SELECT Prénom FROM utilisateur WHERE email= "' . $_POST['mail'] . '"';
-    // $resPrenom = $con->query($prenom);
-    // $rowPrenom = $resPrenom->fetch();
     if (!$user){
         $_SESSION['erreur7'] = 1;
 		$_SESSION['erreur8'] = 0;
@@ -50,5 +44,8 @@ if (isset($_POST['reset'])) {
 	$_SESSION['erreur8'] = 0;
 	$_SESSION['success2'] = 0;
 	header("Refresh:0; url= ../views/login.php");
+}
+if (isset($_POST['MDP'])) {
+	header("Refresh:0; url= ../views/oubliMDP.php");
 }
 ?>

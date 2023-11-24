@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$_SESSION['success'] = 1;
 
 		$mail_body = "
-   <p>Salut " . $prenom . ",</p>
+   <p>Bonjour " . $prenom . ",</p>
    <p>Merci pour votre inscription. Votre mot de passe est: " . $mdp . ",</p>
    <p>Cordialement</p>
    ";

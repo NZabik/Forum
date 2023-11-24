@@ -39,6 +39,9 @@ require_once "../controllers/logincontroller.php";
                 if (isset($_SESSION['success2']) && $_SESSION['success2'] == 1) {
                     echo '<p id="success">Vous vous êtes connecté !</p>';
                 }
+                if (isset($_SESSION['success4']) && $_SESSION['success4'] == 1) {
+                    echo '<p id="success">Mot de passe changé</p>';
+                }
                 ?>
                 <div id="btn-container">
                     <input id="btn3" class="input-style" type="submit" name="MDP" value="Mot de passe oublié" />
