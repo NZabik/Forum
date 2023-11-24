@@ -2,6 +2,8 @@
 if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "../includes/head.php";
 require_once "../controllers/logincontroller.php";
+require_once "../config.php";
+require_once "../callback.php";
 ?>
 <link rel="stylesheet" href="../CSS/login.css">
 <div id="accueil">
@@ -50,6 +52,7 @@ require_once "../controllers/logincontroller.php";
 
                 </div>
         </form>
+        <div>  <a id="google" class="input-style"  href ="<?php  echo  $google_client ->  createAuthUrl(); ?>">Login with <img height="20px" src="../images/google-color-svgrepo-com.svg"> </a>  </div>
     </div>
 </div>
 <script>

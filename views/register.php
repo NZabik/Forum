@@ -2,6 +2,7 @@
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 require_once "../includes/head.php";
 require_once "../controllers/registercontroller.php";
+
 ?>
 <link rel="stylesheet" href="../CSS/register.css">
 <div id="accueil">
@@ -82,6 +83,7 @@ require_once "../controllers/registercontroller.php";
         <input id="btn" class="input-style" type="submit" value="S'enregistrer" />
     </div>
     </form>
+    
 </div>
 </div>
 <script>

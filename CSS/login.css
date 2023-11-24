@@ -24,7 +24,14 @@ body {
     color: #00ff4c;
     text-decoration: none;
 }
-
+#google{
+    text-decoration: none;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-left: 5px;
+}
 #divProfil {
     height: 56px;
     width: 56px;

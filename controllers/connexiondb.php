@@ -4,7 +4,7 @@ function connectdb()
 $serveur = "localhost";
 $user = "root";
 $password = "";
-$bdd = "forum";
+$bdd = "forum_google";
 
 try {
 
