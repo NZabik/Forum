@@ -49,7 +49,7 @@ There are 5 buttons on the header:
 - The **_S'enregistrer_** button: Allows you to create an account.
 - The **_Se connecter_** button: Allows you to log in if an account has been created. The button only works if the user is logged out, otherwise, the button is disabled.
 - The **_Se déconnecter_** button: Allows you to disconnect the user.
-- When the user is logged, his name and profile picture appears in the upper right corner, you can click on it to view the user's informations and created subjects/messages.
+- When the user is logged in, his name and profile picture appears in the upper right corner, you can click on it to view the user's informations and created subjects/messages.
 
 #### 2. Home
 Includes two buttons allowing you to either register or log in.
@@ -57,14 +57,14 @@ Includes two buttons allowing you to either register or log in.
 #### 3. Registration page
 Includes the necessary checks in the registration datas, such as the name length, the mail typo verification, the password requirements...etc...
 
-The user database is filled with the input fields uppon registration.
+The user database is filled with the input fields upon registration.
 You can not create an account if the mail already exists in the database.
 
-*A message is displayed upon successful registration and a mail is sent tou the user with his login password.*
+*A message is displayed upon successful registration and a mail is sent to the user with his login credentials.*
 
 #### 4. Login page
 Includes the necessary checks from the data saved in the database.
-you can either create an account and log in via google, it will auto fill the user database with the required informations.
+you can either create an account and log in via google api, it will auto fill the user database with the required informations.
 
 *A message is displayed upon successful connection.*
 
