@@ -102,11 +102,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$mail2->Host = 'smtp.laposte.net';  //Sets the SMTP hosts of your Email hosting, this for Godaddy
 		$mail2->Port = '465';        //Sets the default SMTP server port
 		$mail2->SMTPAuth = true;       //Sets SMTP authentication. Utilizes the Username and Password variables
-		$mail2->Username = 'testmailPHP';     //Sets SMTP username
-		$mail2->Password = 'cLH:dQek7vrKMEd';     //Sets SMTP password
+		$mail2->Username = 'nom SMTP';     //Sets SMTP username
+		$mail2->Password = 'password SMTP';     //Sets SMTP password
 		$mail2->SMTPSecure = 'ssl';       //Sets connection prefix. Options are "", "ssl" or "tls"
-		$mail2->From = 'testmailphp@laposte.net';   //Sets the From email address for the message
-		$mail2->FromName = 'Nicolas Zabik';     //Sets the From name of the message
+		$mail2->From = 'adresse mail';   //Sets the From email address for the message
+		$mail2->FromName = 'nom';     //Sets the From name of the message
 		$mail2->AddAddress($mail);  //Adds a "To" address   
 		$mail2->WordWrap = 50;       //Sets word wrapping on the body of the message to a given number of characters
 		$mail2->IsHTML(true);       //Sets message type to HTML    
