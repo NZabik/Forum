@@ -2,17 +2,6 @@
 <html lang="fr">
 <?php
 if (session_status() !== PHP_SESSION_ACTIVE) session_start();
-$_SESSION['erreur1'] = 0;
-$_SESSION['erreur2'] = 0;
-$_SESSION['erreur3'] = 0;
-$_SESSION['erreur4'] = 0;
-$_SESSION['erreur5'] = 0;
-$_SESSION['erreur6'] = 0;
-$_SESSION['success'] = 0;
-$_SESSION['erreur7'] = 0;
-$_SESSION['erreur8'] = 0;
-$_SESSION['success'] = 0;
-$_SESSION['success2'] = 0;
 ?>
 
 <head>
